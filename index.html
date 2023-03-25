@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>季度贝塔系数计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>季度贝塔系数计算器</h1>
+    </header>
+    <main>
+        <p>1、为什么要计算beta，因为遵从资本资产定价模型，识别单项相对于总体的敏感性；</p>
+        <p>2、请输入季度数据，因为日内甚至周内的波动，都可以视为意义不大；</p>
+	<p>3、如果beta系数小于1，那么作为主动投资的部分意义就不大，因为跑不赢S&P 500；</p>
+        <form id="beta-form">
+            <label for="stockPrices">请输入股票历史季度价格（空格分隔）:</label>
+            <input type="text" id="stockPrices" name="stockPrices" required>
+            <label for="sp500Prices">请输入标普500指数历史季度价格（空格分隔）:</label>
+            <input type="text" id="sp500Prices" name="sp500Prices" required>
+            <button type="submit">计算季度贝塔系数</button>
+        </form>
+        <div id="result"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
