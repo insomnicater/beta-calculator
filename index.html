@@ -11,11 +11,11 @@
         <h1>季度贝塔系数计算器</h1>
     </header>
     <main>
-        <p>1、为什么要计算beta，因为遵从资本资产定价模型，识别单项相对于总体的敏感性；</p>
+        <p>1、为什么要计算beta，因为遵从资本资产定价模型，识别单项相对于总体的波动性。；</p>
         <p>2、请输入季度数据，因为日内甚至周内的波动，都可以视为意义不大；</p>
-	<p>3、如果beta系数小于1，那么作为主动投资的部分意义就不大，因为跑不赢S&P 500；</p>
+	<p>3、beta表示了标的资产相对于市场组合的风险。当beta大于1时，意味着标的资产的波动性高于市场；当beta小于1时，意味着标的资产的波动性低于市场；当beta等于1时，意味着标的资产的波动性与市场相同。；</p>
         <form id="beta-form">
-            <label for="stockPrices">请输入股票历史季度价格（空格分隔）:</label>
+            <label for="stockPrices">请输入标的资产历史季度价格（空格分隔）:</label>
             <input type="text" id="stockPrices" name="stockPrices" required>
             <label for="sp500Prices">请输入标普500指数历史季度价格（空格分隔）:</label>
             <input type="text" id="sp500Prices" name="sp500Prices" required>
