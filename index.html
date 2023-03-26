@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>季度贝塔系数计算器</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  table, th, td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+  }
+
+  caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  thead th {
+    background-color: #f2f2f2;
+  }
+</style>
+
 </head>
 <body>
     <header>
@@ -25,5 +48,21 @@
         <div id="result"></div>
     </main>
     <script src="app.js"></script>
+<table>
+  <caption>2018年-2022年的beta</caption>
+  <thead>
+    <tr>
+      <th>标的资产</th>
+      <th>beta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BTC</td>
+      <td>2.55</td>
+    </tr>
+  </tbody>
+</table>
+
 </body>
 </html>
