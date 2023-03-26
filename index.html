@@ -47,6 +47,7 @@
             <input type="text" id="stockPrices" name="stockPrices" required>
             <label for="sp500Prices">请输入标普500指数历史季度价格（空格分隔）:</label>
             <input type="text" id="sp500Prices" name="sp500Prices" required>
+	    <p>备注：可以在google sheet中输入公式"=INDEX(GOOGLEFINANCE("AAPL", "price", B1), 2, 2)"获取B列第1行日期的AAPL价格，或者tradingview的付费用户也可以直接导出价格，以此类推，然后复制黏贴价格列过来即可</p>
             <button type="submit">计算季度贝塔系数</button>
         </form>
         <div id="result"></div>
