@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<style>
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+    }
+
+    .navbar .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X664HKD5V9"></script>
 <script>
@@ -44,6 +67,10 @@
 </head>
 
 <body>
+<div class="navbar">
+    <a class="active" href="index.html">贝塔系数计算器</a>
+    <a href="backtest.html">回测60/40投资模型</a>
+  </div>
     <header>
         <h1>季度贝塔系数计算器</h1>
     </header>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回测60/40投资模型</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入图表库 -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+    }
+
+    .navbar .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html">贝塔系数计算器</a>
+    <a class="active" href="backtest.html">回测60/40投资模型</a>
+  </div>
+    <h1>回测60/40投资模型</h1>
+    <p>请输入标的资产的季度价格数据，用空格分隔。</p>
+    <form id="backtest-form">
+        <label for="prices">季度价格数据:</label>
+        <textarea id="prices" rows="5" cols="30"></textarea>
+        <br>
+        <button type="submit">计算回测结果</button>
+    </form>
+    <div id="chart"></div>
+    <script src="backtest.js"></script>
+</body>
+</html>
