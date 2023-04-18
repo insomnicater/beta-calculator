@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitcoin Price Tracker</title>
+	<meta charset="utf-8">
+	<style>
+		.price {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bitcoin Price Tracker</h1>
+	<p>Current BTC price:</p>
+	<div class="price"></div>
+
+	<script>
+		function getBitcoinPrice() {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var response = JSON.parse(this.responseText);
+					var price = response.data.amount;
+					document.querySelector('.price').innerHTML = '$' + price;
+				}
+			};
+			xhr.open('GET', 'https://api.coinbase.com/v2/prices/BTC-USD/spot', true);
+			xhr.send();
+		}
+		getBitcoinPrice(); // Call the function immediately
+
+		setInterval(function() {
+			getBitcoinPrice();
+		}, 180000); // Call the function every 3 minutes
+	</script>
+</body>
+</html>
